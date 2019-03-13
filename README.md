@@ -9,5 +9,5 @@ gcc main.c -o palindrome
 
 #### Execute:
 ```
-./palindrome
+./palindrome [string]
 ```
