@@ -1,5 +1,4 @@
 /*
-
 EXAMPLE:
 
 SATOR
@@ -7,7 +6,6 @@ AREPO
 TENET
 OPERA
 ROTAS
-
 */
 
 #include <stdio.h>
@@ -18,7 +16,6 @@ ROTAS
 
 #define ALPHABET "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 #define ALPHABET_LENGTH 26
-#define SIZE 40
 #define PALINDROME_DEFAULT "IRONX"
 
 const char *progname;
