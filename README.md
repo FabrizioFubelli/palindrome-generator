@@ -4,7 +4,7 @@
 
 #### Compile:
 ```
-gcc main.c -o palindrome
+make
 ```
 
 #### Execute:

@@ -83,13 +83,9 @@ char **new_palindrome(char *name, unsigned int length) {
     palindrome = (char **) malloc(sizeof(char*)*length);
     palindrome[0] = name;
     palindrome[length-1] = name;
+    // Allocate space for 5 characters in each line
     for (i=0; i<length; i++) {
-        // Allocate space for 5 characters in each line
         palindrome[i] = malloc(sizeof(char)*length);
-        for (j=0; j<length; j++) {
-            // Allocate space for 5 characters in each line
-            palindrome[i][j] = '_';
-        }
     }
     y = 0;
     y_last = length-1;
