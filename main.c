@@ -27,6 +27,12 @@ char rand_char();
 char *rand_string(unsigned int length);
 unsigned int summary(unsigned int n);
 
+/**
+ * The main function
+ * @param argc Count of arguments
+ * @param argv Array of arguments
+ * @return 0 if done, otherwise > 0
+*/
 int main(int argc, char* argv[]) {
     unsigned int i=0, length; char *name; char c;
     progname = argv[0];
@@ -56,10 +62,20 @@ int main(int argc, char* argv[]) {
     printf("\n");
 }
 
+/**
+ * The usage method
+ * @return void
+*/
 void usage() {
     printf("Usage: %s <string>\n\n", progname);
 }
 
+/**
+ * Generates a new palindrome
+ * @param name The starter string
+ * @param length The length of the string
+ * @return A new palindrome (array of string)
+*/
 char **new_palindrome(char *name, unsigned int length) {
     unsigned int i, j, x, y, x_last, y_last;
     char c; char **palindrome;
@@ -102,6 +118,12 @@ char **new_palindrome(char *name, unsigned int length) {
     return palindrome;
 }
 
+/**
+ * Clean a palindrome from RAM
+ * @param palindrome A palindrome
+ * @param length The length of the palindrome's start string
+ * @return void
+*/
 void free_palindrome(char **palindrome, unsigned int length) {
     unsigned int i;
     for (i=0; i<length; i++) {
@@ -110,6 +132,12 @@ void free_palindrome(char **palindrome, unsigned int length) {
     free(palindrome);
 }
 
+/**
+ * Print a palindrome
+ * @param palindrome A palindrome
+ * @param length The length of the palindrome's start string
+ * @return void
+*/
 void print_palindrome(char **palindrome, unsigned int length) {
     unsigned int i;
     for (i=0; i<length; i++) {
@@ -117,10 +145,19 @@ void print_palindrome(char **palindrome, unsigned int length) {
     }
 }
 
+/**
+ * Generate a random character
+ * @return The random character
+*/
 char rand_char() {
     return ALPHABET[rand() % ALPHABET_LENGTH];
 }
 
+/**
+ * Generate a random string
+ * @param length The string length
+ * @return The random string
+*/
 char *rand_string(unsigned int length) {
     unsigned int i;
     char *r_string = (char *) malloc(sizeof(char)*length);
