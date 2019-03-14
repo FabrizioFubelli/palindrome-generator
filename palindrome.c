@@ -77,8 +77,7 @@ void usage() {
  * @return A new palindrome (array of string)
 */
 char **new_palindrome(char *name, unsigned int length) {
-    unsigned int i, j, x, y, x_last, y_last;
-    char c; char **palindrome;
+    unsigned int i, j, x, y, x_last, y_last; char **palindrome;
     // Allocate space for n string pointers (n=length)
     palindrome = (char **) malloc(sizeof(char*)*length);
     palindrome[0] = name;
